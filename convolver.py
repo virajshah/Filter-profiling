@@ -11,7 +11,7 @@ def makematrix(width, height):
 """Create the filter matrix of the same size as above, i.e. pad
 the rest of the matrix with zeroes. I didn't know where to anchor
 the [-1 0 1] part so I just did it to the top left corner- first element
-of the matrix"""
+of the matrix
 def makefilters(width, height):
 	xfilter = numpy.zeros((height, width))
 	yfilter = numpy.zeros((height, width))
@@ -21,6 +21,7 @@ def makefilters(width, height):
 	yfilter[0,0] = -1
 	yfilter[2,0] = 1
 	return (xfilter, yfilter)
+"""
 
 #Perform convolution to find dx where filterx is the kernel.
 def computedx(image, filterx):
